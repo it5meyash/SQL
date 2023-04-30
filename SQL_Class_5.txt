@@ -233,16 +233,6 @@ select *,
       lead(sales_amount, 1) over(order by sales_date) as next_day_sales
 from daily_sales;
 
-# Diff between lead and lag
-select *,
-      lag(sales_amount, 1) over(order by sales_date) as pre_day_sales
-from daily_sales;
-
-select *,
-      lead(sales_amount, 1) over(order by sales_date) as next_day_sales
-from daily_sales;
-
-
 # How to use Frame Clause - Rows BETWEEN
 select * from daily_sales;
 
